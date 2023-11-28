@@ -1,7 +1,27 @@
 html {
     background-color: salmon;
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+footer a:link {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: black;
+    text-decoration: none;
+}
+   
 .title-ul {
     /* color: darkcyan; */
     padding: 0.5em;
@@ -18,10 +38,39 @@ li {
     list-style: none;
 }
 
-.ul-name {
-    color: darkcyan;
+/* 
+:link ･･･未訪問リンク
+:visited ･･･訪問済みリンク
+:hover ･･･カーソルが重なった時
+:active ･･･クリックしてから離される時まで 
+*/
+
+.ul-name a:hover {
+    color: cyan;
+    text-decoration: underline;
 }
 
-.ul-github {
+.ul-name a:link {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+.ul-name a:visited {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+.ul-github a:hover {
     color: grey;
+    text-decoration: underline;
+}
+
+.ul-github a:link {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.ul-github a:visited {
+    color: darkgrey;
+    text-decoration: none;
 }
