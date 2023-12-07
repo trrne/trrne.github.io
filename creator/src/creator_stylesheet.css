@@ -1,0 +1,70 @@
+html {
+    background-color: darkslategrey;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Mochiy Pop One, sans-serif;
+}
+
+.head-title {
+    font-size: 64px;
+    padding: 0.5em;
+    color: whitesmoke;
+    display: block;
+    line-height: 1.5;
+    background: black;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.creator-ul {
+    padding: 0.5em;
+    display: grid;
+    vertical-align: middle;
+}
+
+.service-title {
+    font-size: 32px;
+    padding: 0.5em;
+    color: whitesmoke;
+    display: block;
+    line-height: 1.5;
+    background: rgb(76, 153, 76);
+    border-radius: 25px 0px 0px 25px;
+}
+
+.service-detail {
+    font-size: 32px;
+    padding: 0.5em;
+    /* color: whitesmoke; */
+    color: black;
+    /* display: block; */
+    line-height: 1.5;
+    /* background: rgb(76, 153, 76); */
+    /* border-radius: 25px 0px 0px 25px; */
+}
+
+.upscayl-li {
+    font-size: xx-large;
+    color: whitesmoke;
+}
+
+.clipdrop-li {
+    font-size: xx-large;
+    color: whitesmoke;
+}
+
+footer a:hover {
+    color: blanchedalmond;
+    text-decoration: underline;
+}
+
+footer a:link {
+    color: blanchedalmond;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: blanchedalmond;
+    text-decoration: none;
+}
