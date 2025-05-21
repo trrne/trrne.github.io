@@ -41,8 +41,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  canvas.addEventListener("touchstart", (e) => {
+    isPressed = true;
+    switch (currentMode) {
+      case types.bucket:
+        ctx.fillStyle = currentColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        break;
+      case types.brush:
+      case types.eraser:
+        ctx.beginPath();
+        ctx.moveTo(e.offsetX, e.offsetY);
+        break;
+    }
+  });
+
   // おえかき中
   canvas.addEventListener("mousemove", (e) => {
+    if (isPressed) {
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.lineWidth = currentLineWidth;
+      ctx.lineCap = ctx.lineJoin = "round";
+      switch (currentMode) {
+        case types.brush:
+          ctx.strokeStyle = currentColor;
+          ctx.globalCompositeOperation = "source-over";
+          break;
+        case types.eraser:
+          ctx.globalCompositeOperation = "destination-out";
+          break;
+      }
+      ctx.stroke();
+    }
+  });
+
+  canvas.addEventListener("touchmove", (e) => {
     if (isPressed) {
       ctx.lineTo(e.offsetX, e.offsetY);
       ctx.lineWidth = currentLineWidth;
@@ -66,8 +99,18 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.closePath();
   });
 
+  canvas.addEventListener("touchend", () => {
+    isPressed = false;
+    ctx.closePath();
+  });
+
   // キャンバス外にでたとき
   canvas.addEventListener("mouseout", () => {
+    isPressed = false;
+    ctx.closePath();
+  });
+
+  canvas.addEventListener("touchout", () => {
     isPressed = false;
     ctx.closePath();
   });
