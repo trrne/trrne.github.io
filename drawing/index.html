@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お絵かキンTV | trrne</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>お絵かキンTV</h1>
+    <div class="controls">
+      <input type="color" id="colorPicker" value="#000000" />
+      <input type="range" id="lineWidth" min="1" max="10" value="5" />
+      <button id="brush">フデ</button>
+      <button id="bucket">バケツ</button>
+      <button id="eraser">消しゴム</button>
+      <button id="clearCanvas">全消去</button>
+      <button id="dl">保存</button>
+    </div>
+    <canvas id="drawingCanvas"></canvas>
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>
