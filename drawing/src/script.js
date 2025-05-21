@@ -8,18 +8,18 @@ const eraserButton = document.getElementById("eraser");
 const clearCanvasButton = document.getElementById("clearCanvas");
 const downloadButton = document.getElementById("dl");
 
+const types = Object.freeze({
+  none: "❎️",
+  brush: "🎨",
+  bucket: "🪣",
+  eraser: "🧹",
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   canvas.width = 800;
   canvas.height = 600;
 
-  const types = Object.freeze({
-    none: "❎️",
-    brush: "🎨",
-    bucket: "🪣",
-    eraser: "🧹",
-  });
-
-  let currentMode = types.none;
+  let currentMode = types.brush;
   let currentColor = colorPicker.value;
   let currentLineWidth = lineWidthControl.value;
 
